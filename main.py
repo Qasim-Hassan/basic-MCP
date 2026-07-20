@@ -24,6 +24,12 @@ if __name__ == "__main__":
         host="127.0.0.1",
         port="8000",
         middleware=[
-            Middleware()
+            Middleware(
+                CORSMiddleware,
+                allow_origins=["*"],
+                allow_credentials=True,
+                allow_methods=["*"],
+                allow_headers=["*"],
+            )
         ]
     )
