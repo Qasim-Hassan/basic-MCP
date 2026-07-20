@@ -34,7 +34,14 @@ def add_todos(_ctx, content: str) -> str:
 def oauth_metadata(request: StarletteRequest) -> JSONResponse:
     base_url = str(request.base_url).rstrip("/")
 
-    return JSONResponse
+    return JSONResponse(
+        {
+            "resource": base_url,
+            "authorization_server": [os.getenv("STYTCH_DOMAIN")],
+            "scopes_supported": ["read", "write"],
+            "bearer_methods_supported": ["header", "body"]
+        }
+    )
 
 if __name__ == "__main__":
     mcp.run(
