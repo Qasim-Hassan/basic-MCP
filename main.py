@@ -13,4 +13,6 @@ def get_my_todos() -> str:
     return "no TODOs"
 
 @mcp.tool()
-def add_todos() -> str:
+def add_todos(content: str) -> str:
+    """add tasks to be done"""
+    
