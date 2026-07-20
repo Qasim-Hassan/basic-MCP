@@ -7,3 +7,4 @@ load_dotenv()
 
 mcp = FastMCP(name="TODO App")
 
+@mcp.tool()
