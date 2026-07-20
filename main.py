@@ -30,6 +30,12 @@ def add_todos(_ctx, content: str) -> str:
 
     return f"added task: {content}"
 
+@mcp.custom_route(path: "/.well-known/oauth-protected-resource", methods=["GET", "OPTIONS"])
+def oauth_metadata(request: StarletteRequest) -> JSONResponse:
+    base_url = str(request.base_url).rstrip("/")
+
+    return JSONResponse
+
 if __name__ == "__main__":
     mcp.run(
         transport="http",
