@@ -9,7 +9,9 @@ from fastmcp.server.dependencies import get_access_tokens, AccessToken
 
 load_dotenv()
 
-
+auth = BearerAuthProvider(
+    jwks_uri=f"{os.getenv('STYTCH_DOMAIN')}/.well-known/jwks.json"
+)
 
 mcp = FastMCP(name="TODO App")
 
