@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware import Middleware
 from starlette.requests import Request as StarletteRequest
+from starlette.responses import JSONResponse
+from fastmcp.server.auth import BearerAuthProvider
 
 load_dotenv()
 
