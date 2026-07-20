@@ -11,3 +11,6 @@ mcp = FastMCP(name="TODO App")
 def get_my_todos() -> str:
     """Get all things to be done for the user"""
     return "no TODOs"
+
+@mcp.tool()
+def
