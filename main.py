@@ -8,3 +8,4 @@ load_dotenv()
 mcp = FastMCP(name="TODO App")
 
 @mcp.tool()
+def get_my_todos() -> str:
