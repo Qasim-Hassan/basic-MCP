@@ -17,3 +17,5 @@ def add_todos(content: str) -> str:
     """add tasks to be done"""
 
     return f"added task: {content}"
+
+if __name__ == "__main__":
