@@ -5,6 +5,7 @@ from starlette.middleware import Middleware
 from starlette.requests import Request as StarletteRequest
 from starlette.responses import JSONResponse
 from fastmcp.server.auth import BearerAuthProvider
+from fastmcp.server.dependencies import get_access_tokens, AccessToken
 
 load_dotenv()
 
