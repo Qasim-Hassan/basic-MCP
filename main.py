@@ -13,4 +13,4 @@ def get_my_todos() -> str:
     return "no TODOs"
 
 @mcp.tool()
-def
+def add_todos() -> str:
