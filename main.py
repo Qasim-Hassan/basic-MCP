@@ -1,7 +1,7 @@
 from fastmcp import FastMCP
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
-from starlette.middleware import middleware
+from starlette.middleware import Middleware
 
 load_dotenv()
 
@@ -23,4 +23,7 @@ if __name__ == "__main__":
         transport="http",
         host="127.0.0.1",
         port="8000",
+        middleware=[
+            Middleware()
+        ]
     )
