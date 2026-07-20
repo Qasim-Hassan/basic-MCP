@@ -19,3 +19,7 @@ def add_todos(content: str) -> str:
     return f"added task: {content}"
 
 if __name__ == "__main__":
+    mcp.run(
+        transport="http",
+        host="127.0.0.1",
+    )
