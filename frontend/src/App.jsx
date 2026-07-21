@@ -21,11 +21,9 @@ function App() {
 
   return (
     <>
-      <StytchProvider stytch={stytch}>
-        <div>
-          {!user ? <StytchLogin config={config}/> : <IdentityProvider />}
-        </div>
-      </StytchProvider>
+      <div>
+        {!user ? <StytchLogin config={config}/> : <IdentityProvider />}
+      </div>
     </>
   )
 }
