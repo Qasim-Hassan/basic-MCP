@@ -1,8 +1,7 @@
 import './App.css'
-
 import { StytchLogin, IdentityProvider, useStytchUser } from '@stytch/react';
 
-const stytch = createStytchClient('public-token-test-55e71ffa-8f25-4632-8479-ca4a193b7464');
+
 
 function App() {
 
