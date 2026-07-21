@@ -80,7 +80,7 @@ function App() {
   return (
     <>
       <div>
-        {!user ? <StytchLogin config={config}/> : <IdentityProvider />}
+        {!user ? <StytchLogin config={config} presentation={presentation}/> : <IdentityProvider />}
       </div>
     </>
   )
