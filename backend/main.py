@@ -17,7 +17,7 @@ auth = JWTVerifier(
     audience=os.getenv("STYTCH_PROJECT_ID")
 )
 
-mcp = FastMCP(name="TODO App")
+mcp = FastMCP(name="TODO App", auth=auth)
 
 @mcp.tool()
 def get_my_todos(_ctx) -> str:
