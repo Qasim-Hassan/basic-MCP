@@ -29,25 +29,27 @@ def add_todos(_ctx, content: str) -> str:
     """add tasks to be done"""
 
     return f"added task: {content}"
+    
 
-@mcp.custom_route(path: "/.well-known/oauth-protected-resource", methods=["GET", "OPTIONS"])
+@mcp.custom_route("/.well-known/oauth-protected-resource", methods=["GET", "OPTIONS"])
 def oauth_metadata(request: StarletteRequest) -> JSONResponse:
     base_url = str(request.base_url).rstrip("/")
 
     return JSONResponse(
         {
             "resource": base_url,
-            "authorization_server": [os.getenv("STYTCH_DOMAIN")],
+            "authorization_servers": [os.getenv("STYTCH_DOMAIN")],
             "scopes_supported": ["read", "write"],
             "bearer_methods_supported": ["header", "body"]
         }
     )
 
+
 if __name__ == "__main__":
     mcp.run(
         transport="http",
         host="127.0.0.1",
-        port="8000",
+        port=8000,
         middleware=[
             Middleware(
                 CORSMiddleware,
