@@ -23,7 +23,7 @@ function App() {
     <>
       <StytchProvider stytch={stytch}>
         <div>
-          {!user ? <StytchLogin config={}/> : <IdentityProvider />}
+          {!user ? <StytchLogin config={config}/> : <IdentityProvider />}
         </div>
       </StytchProvider>
     </>
