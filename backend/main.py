@@ -4,13 +4,13 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware import Middleware
 from starlette.requests import Request as StarletteRequest
 from starlette.responses import JSONResponse
-from fastmcp.server.auth import BearerAuthProvider
-from fastmcp.server.dependencies import get_access_tokens, AccessToken
+from fastmcp.server.auth import JWTVerifier
+from fastmcp.server.dependencies import get_access_token, AccessToken
 import os
 
 load_dotenv()
 
-auth = BearerAuthProvider(
+auth = JWTVerifier(
     jwks_uri=f"{os.getenv('STYTCH_DOMAIN')}/.well-known/jwks.json",
     issuer=os.getenv("STYTCH_DOMAIN"),
     algorithm="RS256",
