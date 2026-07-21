@@ -2,7 +2,7 @@ import './App.css'
 import { StytchLogin, IdentityProvider, useStytchUser, Products } from '@stytch/react';
 
 function App() {
-  const {user: User} = useStytchUser();
+  const {user} = useStytchUser();
   const config = {
     products: [Products.emailMagicLinks],
     emailMagicLinksOptions: {
