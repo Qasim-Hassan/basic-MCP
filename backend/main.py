@@ -48,15 +48,7 @@ def oauth_metadata(request: StarletteRequest) -> JSONResponse:
 if __name__ == "__main__":
     mcp.run(
         transport="http",
-        host="127.0.0.1",
+        host="0.0.0.0",  # Allows Codespaces to route external traffic
         port=8000,
-        middleware=[
-            Middleware(
-                CORSMiddleware,
-                allow_origins=["*"],
-                allow_credentials=True,
-                allow_methods=["*"],
-                allow_headers=["*"],
-            )
-        ]
+        allow_origin="*"  # Bypasses the strict MCP transport origin check
     )
