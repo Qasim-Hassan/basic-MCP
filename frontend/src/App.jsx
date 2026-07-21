@@ -1,12 +1,11 @@
 import './App.css'
-import { StytchLogin, IdentityProvider, useStytchUser } from '@stytch/react';
+import { StytchLogin, IdentityProvider, useStytchUser, Products } from '@stytch/react';
 
 function App() {
   const {user: User} = useStytchUser();
   const config = {
-    products: [Products.oauth],
-    oauthOptions: {
-      providers: [{ type: OAuthProviders.Google }],
+    products: [Products.emailMagicLinks],
+    emailMagicLinksOptions: {
       loginRedirectURL: 'https://www.stytch.com/login',
       signupRedirectURL: 'https://www.stytch.com/signup',
     },
