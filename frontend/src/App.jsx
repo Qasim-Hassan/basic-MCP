@@ -8,6 +8,7 @@ function App() {
       products: [Products.passwords],
       passwordOptions: {
         loginRedirectURL: 'https://www.stytch.com/login',
+        resetPasswordRedirectURL: 'https://www.stytch.com/reset-password',
       },
       sessionOptions: {
         sessionDurationMinutes: 60,
