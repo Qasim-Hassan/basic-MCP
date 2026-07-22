@@ -21,6 +21,9 @@ STYTCH_PROJECT_ID=
 Then run:
 
 > pip install uv
+
+Then: 
+
 > uv run main.py
 
 This starts the MCP Server on port 8000.
@@ -36,6 +39,9 @@ Add your public token from STYTCH in *main.jsx* where it says ```add-your-public
 Then run:
 
 > npm install
+
+Then:
+
 > npm run dev
 
 This runs frontend application on port 5173
