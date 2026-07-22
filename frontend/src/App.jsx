@@ -5,10 +5,11 @@ function App() {
     const {user} = useStytchUser();
 
     const config = {
-      products: [Products.passwords],
-      passwordOptions: {
+      products: [Products.oauth],
+      oauthOptions: {
+        providers: [{ type: OAuthProviders.Google }],
         loginRedirectURL: 'https://www.stytch.com/login',
-        resetPasswordRedirectURL: 'https://www.stytch.com/reset-password',
+        signupRedirectURL: 'https://www.stytch.com/signup',
       },
       sessionOptions: {
         sessionDurationMinutes: 60,
