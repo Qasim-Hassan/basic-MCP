@@ -8,7 +8,15 @@ Clone the repo
 
 **Backend**
 
-cd into backend and run:
+cd into backend.
+
+Create .env file with these fields:
+
+```
+
+```
+
+Then run:
 
 > pip install uv
 > uv run main.py
