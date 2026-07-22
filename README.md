@@ -23,3 +23,5 @@ cd into frontend and run:
 
 > npm install
 > npm run dev
+
+This runs frontend application on port 5173
