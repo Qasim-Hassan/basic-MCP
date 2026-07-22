@@ -1,15 +1,14 @@
 import './App.css'
-import {StytchLogin, OAuthProviders, IdentityProvider, useStytchUser, Products} from "@stytch/react";
+import {StytchLogin, IdentityProvider, useStytchUser, Products} from "@stytch/react";
 
 function App() {
     const {user} = useStytchUser();
 
     const config = {
-      products: [Products.oauth],
-      oauthOptions: {
-        providers: [{ type: OAuthProviders.Google }],
+      products: [Products.passwords],
+      passwordOptions: {
         loginRedirectURL: 'https://www.stytch.com/login',
-        signupRedirectURL: 'https://www.stytch.com/signup',
+        resetPasswordRedirectURL: 'https://www.stytch.com/reset-password',
       },
       sessionOptions: {
         sessionDurationMinutes: 60,
