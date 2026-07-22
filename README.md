@@ -1,2 +1,2 @@
 # basic-MCP
-Basic production grade (opensource) MCP server
+Basic opensource MCP server
