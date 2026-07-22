@@ -1,4 +1,5 @@
 import './App.css'
+import {StytchLogin, IdentityProvider, useStytchUser, Products} from "@stytch/react";
 
 function App() {
     const {user} = useStytchUser();
