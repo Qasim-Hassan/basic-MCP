@@ -10,9 +10,13 @@ Clone the repo
 
 cd into backend.
 
-Create .env file with these fields:
+Create *.env* file with these fields:
 
 ```
+
+STYTCH_DOMAIN=
+STYTCH_SECRET=
+STYTCH_PROJECT_ID=
 
 ```
 
