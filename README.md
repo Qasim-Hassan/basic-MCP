@@ -20,3 +20,6 @@ This starts the MCP Server on port 8000.
 **Frontend**
 
 cd into frontend and run:
+
+> npm install
+> npm run dev
